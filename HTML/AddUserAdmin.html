@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Add</title>
+    <link rel="stylesheet" href="../css/userForm.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div>
+      <form
+        action="http://localhost:3000/api/invite/add
+      "
+        method="POST"
+        id="userForm"
+      >
+        <h4 class="text-warning text-center pt-5">User Registration</h4>
+
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="firstName"
+            placeholder="firstName"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="LastName"
+            placeholder="lastName"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="email"
+            placeholder="ENTER EMAIL"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+      
+     <div class="header"></div>
+
+          <button type="submit">submit</button>
+        </label>
+      </form>
+    </div>
+
+    <script src="../JS/post.js"></script>
+    <script src="../JS/createDropdown.js"></script>
+    <script>
+      createDropDown('http://localhost:3000/api/userDesignations/all','Designations');
+      createDropDown('http://localhost:3000/api/userRoles/all','Roles');
+    </script>
+  </body>
+</html>

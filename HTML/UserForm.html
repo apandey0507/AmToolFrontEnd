@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Add</title>
+    <link rel="stylesheet" href="../css/userForm.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div>
+      <form
+        action="http://localhost:3000/api/Users
+      "
+        method="POST"
+        id="userForm"
+      >
+        <h4 class="text-warning text-center pt-5">User Registration</h4>
+
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="firstName"
+            placeholder="firstName"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="LastName"
+            placeholder="lastName"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="Email"
+            placeholder="ENTER EMAIL"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input
+            type="phone"
+            class="input"
+            name="Phone"
+            placeholder="Contact No."
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input
+            type="file"
+            class="input"
+            name="ProfilePicturePath"
+            placeholder="Select Profile Picture"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label for="designations"
+          >Select Designation <br />
+          <select name="DesignationId" id="designationId">
+            <option value="1">Software Development Engineer</option>
+            <option value="2">Analyst</option>
+            <option value="3">HR</option>
+            <option value="4">Admin</option>
+          </select>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+        <label for="Roles"
+          >Select Role:<br />
+          <select name="RoleId" id="roleId">
+            <option value="1">Admin</option>
+            <option value="2">AM</option>
+            <option value="3">Senior Manager</option>
+            <option value="4">Manager</option>
+          </select>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+
+          <button type="submit">submit</button>
+        </label>
+      </form>
+    </div>
+    <div>
+      <form
+        action="http://localhost:3000/api/Users/update/2
+      "
+        method="PUT"
+        id="putForm"
+      >
+        <h4 class="text-warning text-center pt-5">Update User</h4>
+
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="firstName"
+            placeholder="firstName"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+        <label>
+          <input
+            type="text"
+            class="input"
+            name="LastName"
+            placeholder="lastName"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input
+            type="phone"
+            class="input"
+            name="Phone"
+            placeholder="Contact No."
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label>
+          <input
+            type="file"
+            class="input"
+            name="ProfilePicturePath"
+            placeholder="Select Profile Picture"
+          />
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+
+        <label for="designations"
+          >Select Designation <br />
+          <select name="DesignationId" id="designationId">
+            <option value="1">Software Development Engineer</option>
+            <option value="2">Analyst</option>
+            <option value="3">HR</option>
+            <option value="4">Admin</option>
+          </select>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+        </label>
+        
+        <label for="Roles"
+          >Select Role:<br />
+          <select name="RoleId" id="roleId">
+            <option value="1">Admin</option>
+            <option value="2">AM</option>
+            <option value="3">Senior Manager</option>
+            <option value="4">Manager</option>
+          </select>
+          <div class="line-box">
+            <div class="line"></div>
+          </div>
+          
+          <input type="submit" class="submit">
+
+          
+      </form>
+    </div>
+    <script src="../JS/post.js"></script>
+    <script src="../JS/put.js"></script>
+  </body>
+</html>

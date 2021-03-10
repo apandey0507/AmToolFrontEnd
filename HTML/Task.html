@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <link rel="stylesheet" href="../css/userForm.css" />
+  <body>
+    <form
+      action="http://localhost:3000/api/tasks/add
+      "
+      method="POST"
+      id="userForm"
+    >
+      <input
+        type="text"
+        name="description"
+        placeholder="Add Task Description"
+      />
+      <input type="submit" value="Add" />
+    </form>
+    <form
+      action="http://localhost:3000/api/tasks/update/2
+    "
+      method="PUT"
+      id="putForm"
+    >
+      <!-- <label>
+        IsActive
+        <input type="hidden" name="isActive" value="0" />
+        <input type="checkbox" name="isActive" value="1" />
+      </label> -->
+      <input
+        type="text"
+        name="description"
+        placeholder="Update Task Description"
+      />
+
+      <input class="update" type="submit" value="update" />
+    </form>
+    <script src="../JS/put.js"></script>
+    <script src="../JS/post.js"></script>
+  </body>
+</html>
