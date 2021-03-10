@@ -1,23 +1,32 @@
 const options = document.querySelector('#options');
 const Users = {
-  'Get all Users in the AMTool': 'api/Users/all',
-  'Get the user details with the current id': 'api/Users/2',
-  'Get all Active Projects under the Given User': 'api/Users/ActiveProject/1',
-  'Get all the Delayed Tasks under given User': 'api/Users/delayedTask/1',
-  'Inactive a user from AMTool': 'api/Users/',
+  'Get all Users in the AMTool': 'api/users/all',
+  'Get the user details with the current id': 'api/users/2',
+  'Get all Active Projects under the Given User': 'api/users/ActiveProject/1',
+  'Get all the Delayed Tasks under given User': 'api/users/delayedTask/1',
+  'Get List of all Invited Users': 'api/invite/all',
+};
+
+const Projects = {
+  'Get All Projects ': 'api/projects/getAll',
+  'Get All User Projects': 'api/projects/getUserProjects/2',
+  'Get Project Details': 'api/projects/getDetail/2',
+  'get All Archive Projects for a user': 'api/projects/userArchives/6',
+  'get All Archive Projects': 'api/projects/archiveProjects',
 };
 
 const ProjectTasks = {
   'Get All Project Tasks': 'api/projectTasks/all',
-  // 'Get project task with id': 'api/projectTasks',
+  'Get List of All Project Specific task sorted According to due date':
+    'api/projectTasks/sortByDueDate/2/3',
+  'Get List of All Project Specific task in given Date Range':
+    'api/projectTasks/byDateRange/2/3',
 };
 const Designations = {
   'Get All Designation Tasks': 'api/userDesignations/all',
-  // 'Get Designation by id': 'api/userDesignation/2',
 };
 const ProductionTeams = {
   'Get All Production Teams': 'api/productionTeams/all',
-  // 'Get Production Team by id': 'api/productionTeams/2',
 };
 const Tasks = {
   'Get All Tasks': 'api/tasks/all',
@@ -44,6 +53,7 @@ const title = [
   'Project Type API',
   'Project Stages API',
   'Task API',
+  'Project API',
 ];
 const emp = [
   Users,
@@ -53,6 +63,7 @@ const emp = [
   projectTypes,
   Stages,
   Tasks,
+  Projects,
 ];
 const generateDOMList = (emp) => {
   for (const key in emp) {

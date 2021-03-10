@@ -10,10 +10,45 @@
         text-decoration: underline;
         color: blanchedalmond;
       }
+      button {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        font-weight: 400;
+        display: inline-block;
+        color: #fff;
+        border-radius: 0.25em;
+        text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.4);
+      }
+
+      .primary {
+        line-height: 40px;
+        transition: ease-in-out 0.2s;
+        padding: 0 16px;
+      }
+
+      .primary:hover {
+        transform: scale(1.02);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+          inset 0 0 0 99999px rgba(0, 0, 0, 0.2);
+      }
+      .delete:before {
+        font-family: FontAwesome;
+        display: inline-block;
+        font-size: 1rem;
+        padding-right: 12px;
+        background: none;
+        color: #fff;
+      }
       p {
         font-style: bold;
         font-size: 25px;
         color: whitesmoke;
+      }
+      .delete {
+        background: #c0392b;
+      }
+      .delete:before {
+        content: 'X';
       }
       body {
         background: url(https://networklessons.com/wp-content/uploads/2019/09/api-icon-black-background.jpg)
@@ -56,9 +91,51 @@
         <li><a href="./HTML/userRole.html">Add/Update role</a></li>
         <li><a href="./HTML/designation.html">add/Update Designations</a></li>
       </ul>
+      <p>Delete API's</p>
+      <li>
+        <button class="primary delete" id="delUserRole">
+          soft delete User Role
+        </button>
+      </li>
+
+      <li>
+        <button class="primary delete" id="delProjectTasks">
+          soft delete Project Tasks
+        </button>
+      </li>
+      <li>
+        <button class="primary delete" id="delProject">
+          soft delete Project
+        </button>
+      </li>
+      <li>
+        <button class="primary delete" id="delUser">soft delete User</button>
+      </li>
+      <li>
+        <button class="primary delete" id="delUserStages">
+          soft delete Stage
+        </button>
+      </li>
+      <li>
+        <button class="primary delete" id="delDesignations">
+          soft delete designation
+        </button>
+      </li>
+      <li>
+        <button class="primary delete" id="delTasks">soft delete Task</button>
+      </li>
+      <li>
+        <button class="primary delete" id="delProductionTeams">
+          soft delete ProductionTeams
+        </button>
+      </li>
+      <li>
+        <button class="primary delete" id="delTypes">soft delete Types</button>
+      </li>
       <h1>GET API</h1>
     </div>
     <div></div>
   </body>
   <script src="./JS/getMethods.js"></script>
+  <script src="./JS/delete.js"></script>
 </html>
